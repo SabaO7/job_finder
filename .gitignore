@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.env
+
+# Credentials (e.g., Google service account JSON)
+credentials.json
+
+
+

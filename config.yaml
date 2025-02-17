@@ -1,0 +1,64 @@
+################################
+# Example config.yaml
+################################
+
+filters:
+  # Used by job_main.py to filter job postings
+  job_titles:
+    - "Product Manager"
+    - "Associate Product Manager"
+    - "Junior Product Manager"
+  min_experience_years: 0
+  max_experience_years: 4
+  locations:
+    - "Kitchener"
+    - "Remote"
+  job_type:
+    - "Full-Time"
+
+output:
+  # Whether to use Google Sheets or Airtable for job postings
+  use_google_sheets: true
+  use_airtable: true
+
+google_sheets:
+  spreadsheet_name: "job_search_feb_2025"
+  worksheet_name: "Scraped Jobs"
+  credentials_file: "credentials.json"
+
+airtable:
+  base_id: "${AIRTABLE_BASE_ID}"
+  table_name: "ScrapedJobs"
+  api_key: "${AIRTABLE_API_KEY}"
+
+################################
+# LLM usage for job scraping fallback or aggregator fallback (if coded in)
+################################
+use_llm: true
+llm:
+  openai_api_key: "${OPENAI_API_KEY}"
+  model_name: "gpt-3.5-turbo"
+  role: "Job Search Assistant"
+  goal: "Help users find relevant job postings"
+  backstory: "You are an AI trained to analyze and extract job listings."
+
+################################
+# Aggregator toggles for aggregator_main.py
+################################
+scrape_latka: true
+scrape_apmlist: true
+scrape_growthlist: true
+
+################################
+# Companies for job_main.py
+# You copy aggregator_companies.csv into here as you like
+# FIX THIS LATER
+################################
+
+################################
+# agentic 
+################################
+autonomous:
+  enable: true
+  feedback_interval: 5
+

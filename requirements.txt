@@ -1,0 +1,40 @@
+# Core dependencies for job scraping & parsing
+requests===2.32.3
+beautifulsoup4===4.13.3
+lxml===5.3.1
+
+# YAML configuration management
+PyYAML===6.0.2
+
+# Google Sheets integration
+gspread===6.1.4
+oauth2client===4.1.3
+
+# Airtable integration
+pyairtable===3.0.1
+
+# CrewAI (LLM-based parsing & agent system)
+crewai===0.102.0
+openai===1.63.0  # Required for LLM interactions
+
+# Web framework & API handling (FastAPI & Uvicorn)
+fastapi===0.115.8
+uvicorn===0.34.0
+
+# Additional utilities
+pydantic===2.10.6  # Ensures compatibility with FastAPI
+python-dotenv===1.0.1  # Environment variable management
+
+# Authentication & Security
+oauthlib===3.2.2
+google-auth===2.38.0
+google-auth-oauthlib===1.2.1
+
+# Browser Automation for Scraping (Playwright & Pyppeteer)
+playwright===1.50.0
+pyppeteer===0.0.25
+
+# Optional: If using headless Chromium automation
+pyee===12.1.1  # Required by Pyppeteer
+
+websockets===10.4
